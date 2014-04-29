@@ -1,0 +1,389 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Utilities">
+      <UniqueIdentifier>{887d195b-7b10-4b39-bd51-25b6a50c523f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Geometry">
+      <UniqueIdentifier>{d79ca655-0d93-48f5-be28-7aeed8318505}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="World">
+      <UniqueIdentifier>{97cd8d9e-4802-4f07-ae9a-b533d4987a28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lights">
+      <UniqueIdentifier>{7384f7d3-32a0-4089-bf5a-6997c9f78ca1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Material">
+      <UniqueIdentifier>{7a427a87-cc2d-4a0d-aca1-7970dda4f37a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Camera">
+      <UniqueIdentifier>{5de5b20e-c678-4b17-84b3-5ba2a39db4d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tracers">
+      <UniqueIdentifier>{567a6bc7-bb61-4491-b94d-e10707254dff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Samplers">
+      <UniqueIdentifier>{b490bec8-28db-41aa-a15b-601d431589f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Texture">
+      <UniqueIdentifier>{3e5c6b41-3fbc-4e11-99ce-7dcb324d0431}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mapping">
+      <UniqueIdentifier>{5455c098-5a6e-4f66-8216-c7011d8f7c5e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Simulations">
+      <UniqueIdentifier>{7592f4c1-93a2-4519-ba2c-ddf89659af0b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SceneFiles">
+      <UniqueIdentifier>{646d07cc-7d49-4f2a-92bf-37e226dcc8c5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Camera\Camera.h">
+      <Filter>Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\Density.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\Geodesic.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\GeometricObject.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\JuliaSet.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\OBJMesh.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\Plane.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\Rect.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\Sphere.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\Triangle.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\Volumetric.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\VolumetricFire.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\VolumetricSphere.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Lights\AmbientOcclusion.h">
+      <Filter>Lights</Filter>
+    </ClInclude>
+    <ClInclude Include="Lights\AreaLight.h">
+      <Filter>Lights</Filter>
+    </ClInclude>
+    <ClInclude Include="Lights\DirectionalLight.h">
+      <Filter>Lights</Filter>
+    </ClInclude>
+    <ClInclude Include="Lights\EnvironmentLighting.h">
+      <Filter>Lights</Filter>
+    </ClInclude>
+    <ClInclude Include="Lights\Light.h">
+      <Filter>Lights</Filter>
+    </ClInclude>
+    <ClInclude Include="Lights\PointLight.h">
+      <Filter>Lights</Filter>
+    </ClInclude>
+    <ClInclude Include="Lights\Spotlight.h">
+      <Filter>Lights</Filter>
+    </ClInclude>
+    <ClInclude Include="Mapping\PlanarMapping.h">
+      <Filter>Mapping</Filter>
+    </ClInclude>
+    <ClInclude Include="Mapping\SphericalMapping.h">
+      <Filter>Mapping</Filter>
+    </ClInclude>
+    <ClInclude Include="Mapping\Mapping.h">
+      <Filter>Mapping</Filter>
+    </ClInclude>
+    <ClInclude Include="Material\Emissive.h">
+      <Filter>Material</Filter>
+    </ClInclude>
+    <ClInclude Include="Material\GlossyReflective.h">
+      <Filter>Material</Filter>
+    </ClInclude>
+    <ClInclude Include="Material\Gooch.h">
+      <Filter>Material</Filter>
+    </ClInclude>
+    <ClInclude Include="Material\Iridescent.h">
+      <Filter>Material</Filter>
+    </ClInclude>
+    <ClInclude Include="Material\Lambert.h">
+      <Filter>Material</Filter>
+    </ClInclude>
+    <ClInclude Include="Material\Material.h">
+      <Filter>Material</Filter>
+    </ClInclude>
+    <ClInclude Include="Material\Phong.h">
+      <Filter>Material</Filter>
+    </ClInclude>
+    <ClInclude Include="Material\Reflective.h">
+      <Filter>Material</Filter>
+    </ClInclude>
+    <ClInclude Include="Material\Refractive.h">
+      <Filter>Material</Filter>
+    </ClInclude>
+    <ClInclude Include="Material\Toon.h">
+      <Filter>Material</Filter>
+    </ClInclude>
+    <ClInclude Include="Material\Translucent.h">
+      <Filter>Material</Filter>
+    </ClInclude>
+    <ClInclude Include="Samplers\Jittered.h">
+      <Filter>Samplers</Filter>
+    </ClInclude>
+    <ClInclude Include="Samplers\Sampler.h">
+      <Filter>Samplers</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneFiles\ErrorStrings.h">
+      <Filter>SceneFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneFiles\Scene.h">
+      <Filter>SceneFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="Simulations\fire.h">
+      <Filter>Simulations</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture\ImageTexture.h">
+      <Filter>Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture\JuliaTexture.h">
+      <Filter>Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture\Texture.h">
+      <Filter>Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture\CheckerTexture.h">
+      <Filter>Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="Tracers\RayCast.h">
+      <Filter>Tracers</Filter>
+    </ClInclude>
+    <ClInclude Include="Tracers\Tracer.h">
+      <Filter>Tracers</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities\BoundingBox.h">
+      <Filter>Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities\CImg.h">
+      <Filter>Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities\Color.h">
+      <Filter>Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities\Constants.h">
+      <Filter>Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities\KDTree.h">
+      <Filter>Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities\Matrix.h">
+      <Filter>Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities\Normal.h">
+      <Filter>Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities\Point2D.h">
+      <Filter>Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities\Point3D.h">
+      <Filter>Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities\Ray.h">
+      <Filter>Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities\ShadeRec.h">
+      <Filter>Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities\tinyxml2.h">
+      <Filter>Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities\Vector3D.h">
+      <Filter>Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="World\World.h">
+      <Filter>World</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Camera\Camera.cpp">
+      <Filter>Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\Density.cpp">
+      <Filter>Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\Geodesic.cpp">
+      <Filter>Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\JuliaSet.cpp">
+      <Filter>Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\OBJMesh.cpp">
+      <Filter>Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\Plane.cpp">
+      <Filter>Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\Rect.cpp">
+      <Filter>Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\Sphere.cpp">
+      <Filter>Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\Triangle.cpp">
+      <Filter>Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\Volumetric.cpp">
+      <Filter>Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\VolumetricFire.cpp">
+      <Filter>Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\VolumetricSphere.cpp">
+      <Filter>Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Lights\AmbientOcclusion.cpp">
+      <Filter>Lights</Filter>
+    </ClCompile>
+    <ClCompile Include="Lights\AreaLight.cpp">
+      <Filter>Lights</Filter>
+    </ClCompile>
+    <ClCompile Include="Lights\DirectionalLight.cpp">
+      <Filter>Lights</Filter>
+    </ClCompile>
+    <ClCompile Include="Lights\EnvironmentLighting.cpp">
+      <Filter>Lights</Filter>
+    </ClCompile>
+    <ClCompile Include="Lights\PointLight.cpp">
+      <Filter>Lights</Filter>
+    </ClCompile>
+    <ClCompile Include="Lights\Spotlight.cpp">
+      <Filter>Lights</Filter>
+    </ClCompile>
+    <ClCompile Include="Mapping\PlanarMapping.cpp">
+      <Filter>Mapping</Filter>
+    </ClCompile>
+    <ClCompile Include="Mapping\SphericalMapping.cpp">
+      <Filter>Mapping</Filter>
+    </ClCompile>
+    <ClCompile Include="Material\Emissive.cpp">
+      <Filter>Material</Filter>
+    </ClCompile>
+    <ClCompile Include="Material\GlossyReflective.cpp">
+      <Filter>Material</Filter>
+    </ClCompile>
+    <ClCompile Include="Material\Gooch.cpp">
+      <Filter>Material</Filter>
+    </ClCompile>
+    <ClCompile Include="Material\Iridescent.cpp">
+      <Filter>Material</Filter>
+    </ClCompile>
+    <ClCompile Include="Material\Lambert.cpp">
+      <Filter>Material</Filter>
+    </ClCompile>
+    <ClCompile Include="Material\Material.cpp">
+      <Filter>Material</Filter>
+    </ClCompile>
+    <ClCompile Include="Material\Phong.cpp">
+      <Filter>Material</Filter>
+    </ClCompile>
+    <ClCompile Include="Material\Reflective.cpp">
+      <Filter>Material</Filter>
+    </ClCompile>
+    <ClCompile Include="Material\Refractive.cpp">
+      <Filter>Material</Filter>
+    </ClCompile>
+    <ClCompile Include="Material\Toon.cpp">
+      <Filter>Material</Filter>
+    </ClCompile>
+    <ClCompile Include="Material\Translucent.cpp">
+      <Filter>Material</Filter>
+    </ClCompile>
+    <ClCompile Include="Samplers\Jittered.cpp">
+      <Filter>Samplers</Filter>
+    </ClCompile>
+    <ClCompile Include="Samplers\Sampler.cpp">
+      <Filter>Samplers</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneFiles\Scene.cpp">
+      <Filter>SceneFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="Simulations\fire.cpp">
+      <Filter>Simulations</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture\JuliaTexture.cpp">
+      <Filter>Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture\CheckerTexture.cpp">
+      <Filter>Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture\ImageTexture.cpp">
+      <Filter>Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="Tracers\RayCast.cpp">
+      <Filter>Tracers</Filter>
+    </ClCompile>
+    <ClCompile Include="Tracers\Tracer.cpp">
+      <Filter>Tracers</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities\BoundingBox.cpp">
+      <Filter>Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities\Color.cpp">
+      <Filter>Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities\KDTree.cpp">
+      <Filter>Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities\Matrix.cpp">
+      <Filter>Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities\Normal.cpp">
+      <Filter>Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities\Point2D.cpp">
+      <Filter>Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities\Point3D.cpp">
+      <Filter>Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities\Ray.cpp">
+      <Filter>Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities\ShadeRec.cpp">
+      <Filter>Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities\tinyxml2.cpp">
+      <Filter>Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities\Vector3D.cpp">
+      <Filter>Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="World\World.cpp">
+      <Filter>World</Filter>
+    </ClCompile>
+    <ClCompile Include="Lights\Light.cpp">
+      <Filter>Lights</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture\Texture.cpp">
+      <Filter>Texture</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<scene>
+    <camera>
+        <origin>-1.5 5 7.5</origin>
+        <dimensions>640 480</dimensions>
+        <aspect>8 6</aspect>
+        <d>5</d>
+        <focal>4.75</focal>
+        <lens_radius>0.025</lens_radius>
+    </camera>
+    <sampler>
+        <type>Jittered</type>
+        <samples>4</samples>
+    </sampler>
+    <recursion_depth>4</recursion_depth>
+    <chunk_size>16</chunk_size>
+    <lighting>
+        <environment_map>SampleAssets/hdr/sunset.bmp</environment_map>
+        <bgcolor>0 0 0</bgcolor>
+        <lights>
+            <light>
+                <type>point</type>
+                <casts_shadows>true</casts_shadows>
+                <color>1 1 1</color>
+                <radiance>3.5</radiance>
+                <location>5 5 5</location>
+            </light>
+            
+            <light>
+                <type>point</type>
+                <casts_shadows>true</casts_shadows>
+                <color>1 1 1</color>
+                <radiance>4</radiance>
+                <location>-3 3 -2</location>
+            </light>
+        </lights>
+    </lighting>
+    
+    <materials>
+        <material>
+            <name>Reflective1</name>
+            <type>reflective</type>
+            <color>0 0 0</color>
+            <specCoeff>50</specCoeff>
+            <reflectivity>0.8</reflectivity>
+        </material>
+        <material>
+            <name>Reflective2</name>
+            <type>reflective</type>
+            <color>0.4 0.2 0.8</color>
+            <texture>SampleAssets/textures/tiles.bmp</texture>
+            <normal_map>SampleAssets/normalmaps/normalmaptiles.bmp</normal_map>
+            <specCoeff>50</specCoeff>
+            <reflectivity>0.2</reflectivity>
+        </material>
+        <material>
+            <name>Iridescent1</name>
+            <type>iridescent</type>
+            <eta>0.5</eta>
+        </material>
+    </materials>
+    <objects>
+        <object>
+            <type>plane</type>
+            <center>0 -1.5 0</center>
+            <normal>0 1 0</normal>
+            <material>Reflective2</material>
+        </object>
+        <object>
+            <type>sphere</type>
+            <center>-5 -1.25 1</center>
+            <radius>2</radius>
+            <material>Reflective1</material>
+        </object>
+        <object>
+            <type>sphere</type>
+            <center>5 -1.25 -1</center>
+            <radius>2</radius>
+            <material>Reflective1</material>
+        </object>
+        <object>
+            <type>OBJ</type>
+            <filename>SampleAssets/objs/dragon.obj</filename>
+            <scale>0.5</scale>
+            <location>0.5 -1 0</location>
+            <material>Iridescent1</material>
+        </object>
+    </objects>
+</scene>

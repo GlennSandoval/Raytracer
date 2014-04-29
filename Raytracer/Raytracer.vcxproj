@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{FC8F7CFC-C683-4FA2-94D1-D47ECC28A5AD}</ProjectGuid>
+    <RootNamespace>Raytracer</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>C:\Users\emma.carlson\Documents\Libraries\boost_1_53_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <AdditionalLibraryDirectories>C:\Users\emma.carlson\Documents\Libraries\boost_1_53_0\stage\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>C:\Users\Emma Rose\Documents\Libraries\boost_1_53_0\stage\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Camera\Camera.h" />
+    <ClInclude Include="Geometry\Density.h" />
+    <ClInclude Include="Geometry\Geodesic.h" />
+    <ClInclude Include="Geometry\GeometricObject.h" />
+    <ClInclude Include="Geometry\JuliaSet.h" />
+    <ClInclude Include="Geometry\OBJMesh.h" />
+    <ClInclude Include="Geometry\Plane.h" />
+    <ClInclude Include="Geometry\Rect.h" />
+    <ClInclude Include="Geometry\Sphere.h" />
+    <ClInclude Include="Geometry\Triangle.h" />
+    <ClInclude Include="Geometry\Volumetric.h" />
+    <ClInclude Include="Geometry\VolumetricFire.h" />
+    <ClInclude Include="Geometry\VolumetricSphere.h" />
+    <ClInclude Include="Lights\AmbientOcclusion.h" />
+    <ClInclude Include="Lights\AreaLight.h" />
+    <ClInclude Include="Lights\DirectionalLight.h" />
+    <ClInclude Include="Lights\EnvironmentLighting.h" />
+    <ClInclude Include="Lights\Light.h" />
+    <ClInclude Include="Lights\PointLight.h" />
+    <ClInclude Include="Lights\Spotlight.h" />
+    <ClInclude Include="Mapping\Mapping.h" />
+    <ClInclude Include="Mapping\PlanarMapping.h" />
+    <ClInclude Include="Mapping\SphericalMapping.h" />
+    <ClInclude Include="Material\Emissive.h" />
+    <ClInclude Include="Material\GlossyReflective.h" />
+    <ClInclude Include="Material\Gooch.h" />
+    <ClInclude Include="Material\Iridescent.h" />
+    <ClInclude Include="Material\Lambert.h" />
+    <ClInclude Include="Material\Material.h" />
+    <ClInclude Include="Material\Phong.h" />
+    <ClInclude Include="Material\Reflective.h" />
+    <ClInclude Include="Material\Refractive.h" />
+    <ClInclude Include="Material\Toon.h" />
+    <ClInclude Include="Material\Translucent.h" />
+    <ClInclude Include="Samplers\Jittered.h" />
+    <ClInclude Include="Samplers\Sampler.h" />
+    <ClInclude Include="SceneFiles\ErrorStrings.h" />
+    <ClInclude Include="SceneFiles\Scene.h" />
+    <ClInclude Include="Simulations\fire.h" />
+    <ClInclude Include="Texture\CheckerTexture.h" />
+    <ClInclude Include="Texture\ImageTexture.h" />
+    <ClInclude Include="Texture\JuliaTexture.h" />
+    <ClInclude Include="Texture\Texture.h" />
+    <ClInclude Include="Tracers\RayCast.h" />
+    <ClInclude Include="Tracers\Tracer.h" />
+    <ClInclude Include="Utilities\BoundingBox.h" />
+    <ClInclude Include="Utilities\CImg.h" />
+    <ClInclude Include="Utilities\Color.h" />
+    <ClInclude Include="Utilities\Constants.h" />
+    <ClInclude Include="Utilities\KDTree.h" />
+    <ClInclude Include="Utilities\Matrix.h" />
+    <ClInclude Include="Utilities\Normal.h" />
+    <ClInclude Include="Utilities\Point2D.h" />
+    <ClInclude Include="Utilities\Point3D.h" />
+    <ClInclude Include="Utilities\Ray.h" />
+    <ClInclude Include="Utilities\ShadeRec.h" />
+    <ClInclude Include="Utilities\tinyxml2.h" />
+    <ClInclude Include="Utilities\Vector3D.h" />
+    <ClInclude Include="World\World.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Camera\Camera.cpp" />
+    <ClCompile Include="Geometry\Density.cpp" />
+    <ClCompile Include="Geometry\Geodesic.cpp" />
+    <ClCompile Include="Geometry\JuliaSet.cpp" />
+    <ClCompile Include="Geometry\OBJMesh.cpp" />
+    <ClCompile Include="Geometry\Plane.cpp" />
+    <ClCompile Include="Geometry\Rect.cpp" />
+    <ClCompile Include="Geometry\Sphere.cpp" />
+    <ClCompile Include="Geometry\Triangle.cpp" />
+    <ClCompile Include="Geometry\Volumetric.cpp" />
+    <ClCompile Include="Geometry\VolumetricFire.cpp" />
+    <ClCompile Include="Geometry\VolumetricSphere.cpp" />
+    <ClCompile Include="Lights\AmbientOcclusion.cpp" />
+    <ClCompile Include="Lights\AreaLight.cpp" />
+    <ClCompile Include="Lights\DirectionalLight.cpp" />
+    <ClCompile Include="Lights\EnvironmentLighting.cpp" />
+    <ClCompile Include="Lights\Light.cpp" />
+    <ClCompile Include="Lights\PointLight.cpp" />
+    <ClCompile Include="Lights\Spotlight.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Mapping\PlanarMapping.cpp" />
+    <ClCompile Include="Mapping\SphericalMapping.cpp" />
+    <ClCompile Include="Material\Emissive.cpp" />
+    <ClCompile Include="Material\GlossyReflective.cpp" />
+    <ClCompile Include="Material\Gooch.cpp" />
+    <ClCompile Include="Material\Iridescent.cpp" />
+    <ClCompile Include="Material\Lambert.cpp" />
+    <ClCompile Include="Material\Material.cpp" />
+    <ClCompile Include="Material\Phong.cpp" />
+    <ClCompile Include="Material\Reflective.cpp" />
+    <ClCompile Include="Material\Refractive.cpp" />
+    <ClCompile Include="Material\Toon.cpp" />
+    <ClCompile Include="Material\Translucent.cpp" />
+    <ClCompile Include="Samplers\Jittered.cpp" />
+    <ClCompile Include="Samplers\Sampler.cpp" />
+    <ClCompile Include="SceneFiles\Scene.cpp" />
+    <ClCompile Include="Simulations\fire.cpp" />
+    <ClCompile Include="Texture\CheckerTexture.cpp" />
+    <ClCompile Include="Texture\ImageTexture.cpp" />
+    <ClCompile Include="Texture\JuliaTexture.cpp" />
+    <ClCompile Include="Texture\Texture.cpp" />
+    <ClCompile Include="Tracers\RayCast.cpp" />
+    <ClCompile Include="Tracers\Tracer.cpp" />
+    <ClCompile Include="Utilities\BoundingBox.cpp" />
+    <ClCompile Include="Utilities\Color.cpp" />
+    <ClCompile Include="Utilities\KDTree.cpp" />
+    <ClCompile Include="Utilities\Matrix.cpp" />
+    <ClCompile Include="Utilities\Normal.cpp" />
+    <ClCompile Include="Utilities\Point2D.cpp" />
+    <ClCompile Include="Utilities\Point3D.cpp" />
+    <ClCompile Include="Utilities\Ray.cpp" />
+    <ClCompile Include="Utilities\ShadeRec.cpp" />
+    <ClCompile Include="Utilities\tinyxml2.cpp" />
+    <ClCompile Include="Utilities\Vector3D.cpp" />
+    <ClCompile Include="World\World.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

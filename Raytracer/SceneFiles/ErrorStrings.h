@@ -1,0 +1,445 @@
+#ifndef __ERRORSTRINGS__
+#define __ERRORSTRINGS__
+
+const char * ROOT_XML_ERROR =
+	"Error in scene file setup. \n"
+	"Scene file must define a root scene node: \n"
+	"<scene>\n"
+	"...\n"
+	"</scene>\n";
+
+const char * CAMERA_XML_ERROR =
+	"Error in scene file camera setup. \n"
+	"Camera should be defined as shown below: \n"
+	"<scene>\n"
+	"...\n"
+	"    <camera>\n"
+	"        <origin>x y z</origin> <!-- where x, y, and z are floats -->\n"
+	"        <dimensions>hDim vDim</dimensions> <!-- where hDim and vDim are ints -->\n"
+	"        <aspect>x y</aspect> <!-- where x and y are floats -->\n"
+	"        <d>d</d> <!-- where d is a float -->\n"
+	"        <focal>f</focal> <!-- where f is a float -->\n"
+	"        <lens_radius>lr</lens_radius> <!-- where lr is a float -->\n"
+	"    </camera>\n"
+	"...\n"
+	"</scene>\n"
+	"See sample scene file for example values.";
+
+const char * SAMPLER_XML_ERROR =
+	"Error in scene file sampler setup. \n"
+	"Sampler should be defined as shown below: \n"
+	"<scene>\n"
+	"...\n"
+	"    <sampler>\n"
+	"        <type>typeName</type> <!-- where typeName is a string -->\n"
+	"        <samples>s</samples> <!-- where s is an int -->\n"
+	"    </sampler>\n"
+	"...\n"
+	"</scene>\n"
+	"See sample scene file for example values.";
+
+const char * RECURSION_DEPTH_XML_ERROR = 
+	"Error in scene file recursion depth setup. \n"
+	"Recursion depth should be defined as shown below: \n"
+	"<scene>\n"
+	"...\n"
+	"    <recursion_depth>n</recursion_depth> <!-- where n is an integer representing --> \n"
+	"                                         <!-- the maximum number of times to recurse --> \n"
+	"...\n"
+	"</scene>\n"
+	"See sample scene file for example values.";
+
+const char * CHUNK_SIZE_XML_ERROR = 
+	"Error in scene file chunk size setup. \n"
+	"Chunk size should be defined as shown below: \n"
+	"<scene>\n"
+	"...\n"
+	"    <chunk_size>n</chunk_size> <!-- where n is an integer representing --> \n"
+	"                               <!-- the size (in pixels) of square to send to the threads --> \n"
+	"...\n"
+	"</scene>\n"
+	"See sample scene file for example values.";
+
+/*
+ * XML SCENE FILE LIGHT ERRORS
+ */
+
+const char * LIGHTING_XML_ERROR = 
+	"Error in scene file lighting setup. \n"
+	"Lighting should be defined as shown below: \n"
+	"<scene>\n"
+	"...\n"
+	"	<lighting>\n"
+	"		<environment_map>filename</environment_map> <!-- where filename is a string -->\n"
+	"		<bgcolor>r g b</bgcolor> <!-- where r, g, and b are floats between 0 and 1 -->\n"
+	"		<lights>\n"
+	"			<light>\n"
+	"				<type>type</type> <!-- where type is a string -->\n"
+	"				<casts_shadows>shadows</casts_shadows> <!-- where shadows is true or false -->\n"
+	"				...\n"
+	"			</light>\n"
+	"			...\n"
+	"		</lights>\n"
+	"	</lighting>\n"
+	"...\n"
+	"</scene>\n"
+	"See sample scene file for example values.";
+
+const char * POINT_LIGHT_XML_ERROR = 
+	"Error in scene file light setup. \n"
+	"Point lights should be defined as shown below: \n"
+	"<scene>\n"
+	"...\n"
+	"	<lighting>\n"
+	"		...\n"
+	"		<lights>\n"
+	"			<light>\n"
+	"				<type>point</type>\n"
+	"				<casts_shadows>shadows</casts_shadows> <!-- where shadows is true or false -->\n"
+	"				<color>r g b</color> <!-- where r, g, and b are floats between 0 and 1 -->\n"
+	"				<radiance>r</radiance> <!-- where r is a float -->\n"
+	"				<location>x y z</location> <!-- where x, y, and z are floats -->\n"
+	"			</light>\n"
+	"			...\n"
+	"		</lights>\n"
+	"	</lighting>\n"
+	"...\n"
+	"</scene>\n"
+	"See sample scene file for example values.";
+
+const char * DIRECTIONAL_LIGHT_XML_ERROR = 
+	"Error in scene file light setup. \n"
+	"Directional lights should be defined as shown below: \n"
+	"<scene>\n"
+	"...\n"
+	"	<lighting>\n"
+	"		...\n"
+	"		<lights>\n"
+	"			<light>\n"
+	"				<type>directional</type>\n"
+	"				<casts_shadows>shadows</casts_shadows> <!-- where shadows is true or false -->\n"
+	"				<color>r g b</color> <!-- where r, g, and b are floats between 0 and 1 -->\n"
+	"				<radiance>r</radiance> <!-- where r is a float -->\n"
+	"				<direction>x y z</direction> <!-- where x, y, and z are floats describing a vector -->\n"
+	"			</light>\n"
+	"			...\n"
+	"		</lights>\n"
+	"	</lighting>\n"
+	"...\n"
+	"</scene>\n"
+	"See sample scene file for example values.";
+
+const char * SPOT_LIGHT_XML_ERROR = 
+	"Error in scene file light setup. \n"
+	"Spot lights should be defined as shown below: \n"
+	"<scene>\n"
+	"...\n"
+	"	<lighting>\n"
+	"		...\n"
+	"		<lights>\n"
+	"			<light>\n"
+	"				<type>spot</type>\n"
+	"				<casts_shadows>shadows</casts_shadows> <!-- where shadows is true or false -->\n"
+	"				<color>r g b</color> <!-- where r, g, and b are floats between 0 and 1 -->\n"
+	"				<radiance>r</radiance> <!-- where r is a float -->\n"
+	"				<location>x y z</location> <!-- where x, y, and z are floats -->\n"
+	"			</light>\n"
+	"			...\n"
+	"		</lights>\n"
+	"	</lighting>\n"
+	"...\n"
+	"</scene>\n"
+	"Currently the spot light always points to the origin.\n"
+	"See sample scene file for example values.";
+
+const char * AREA_LIGHT_XML_ERROR = 
+	"Error in scene file light setup. \n"
+	"Area lights should be defined as shown below: \n"
+	"<scene>\n"
+	"...\n"
+	"	<lighting>\n"
+	"		...\n"
+	"		<lights>\n"
+	"			<light>\n"
+	"				<type>area</type>\n"
+	"				<casts_shadows>shadows</casts_shadows> <!-- where shadows is true or false -->\n"
+	"				<color>r g b</color> <!-- where r, g, and b are floats between 0 and 1 -->\n"
+	"				<radiance>r</radiance> <!-- where r is a float -->\n"
+	"				<corner>x y z</corner> <!-- where x, y, and z are floats describing the corner of a rectangle -->\n"
+	"				<side1>x y z</side1> <!-- where x, y, and z are floats describing a vector represeting 1 side of a rectangle -->\n"
+	"				<side2>x y z</side2> <!-- where x, y, and z are floats describing a vector represeting 1 side of a rectangle -->\n"
+	"			</light>\n"
+	"			...\n"
+	"		</lights>\n"
+	"	</lighting>\n"
+	"...\n"
+	"</scene>\n"
+	"See sample scene file for example values.";
+
+const char * AMBIENT_OCCLUSION_XML_ERROR = 
+	"Error in scene file light setup. \n"
+	"Ambient occlusion should be defined as shown below: \n"
+	"<scene>\n"
+	"...\n"
+	"	<lighting>\n"
+	"		...\n"
+	"		<lights>\n"
+	"			<light>\n"
+	"				<type>ambientocclusion</type>\n"
+	"				<casts_shadows>shadows</casts_shadows> <!-- where shadows is true or false -->\n"
+	"			</light>\n"
+	"			...\n"
+	"		</lights>\n"
+	"	</lighting>\n"
+	"...\n"
+	"</scene>\n"
+	"See sample scene file for example values.";
+
+const char * ENV_LIGHTING_XML_ERROR = 
+	"Error in scene file light setup. \n"
+	"Environment lighting should be defined as shown below: \n"
+	"<scene>\n"
+	"...\n"
+	"	<lighting>\n"
+	"		...\n"
+	"		<lights>\n"
+	"			<light>\n"
+	"				<type>environment</type>\n"
+	"				<casts_shadows>shadows</casts_shadows> <!-- where shadows is true or false -->\n"
+	"				<filename>f</filename> <!-- where f is the filename of the environment map to use for lighting -->\n"
+	"			</light>\n"
+	"			...\n"
+	"		</lights>\n"
+	"	</lighting>\n"
+	"...\n"
+	"</scene>\n"
+	"See sample scene file for example values.";
+
+/*
+ * XML SCENE FILE MATERIALS ERRORS
+ */
+
+const char * MATERIALS_XML_ERROR = 
+	"Error in scene file materials setup. \n"
+	"Materials should be defined as shown below: \n"
+	"<scene>\n"
+	"...\n"
+	"	<materials>\n"
+	"		<material>\n"
+	"			<name>name</name> <!-- where name is a unique string --> \n"
+	"			<type>type</type> <!-- where type is a string --> \n"
+	"			...\n"
+	"		</material>\n"
+	"	</materials>\n"
+	"...\n"
+	"</scene>\n"
+	"See sample scene file for example values.";
+
+const char * LAMBERT_MATERIAL_XML_ERROR = 
+	"Error in scene file materials setup. \n"
+	"Lambert material should be defined as shown below: \n"
+	"<scene>\n"
+	"...\n"
+	"	<materials>\n"
+	"		<material>\n"
+	"			<name>name</name> <!-- where name is a unique string --> \n"
+	"			<type>lambert</type> \n"
+	"			<color>r g b</color> <!-- where r, g, and b are floats between 0 and 1 -->\n"
+	"			<texture>f</texture> <!-- (optional) where f is the filename of the texture to use -->\n"
+	"			<normal_map>f</normal_map> <!-- (optional) where f is the filename of the normal map to use -->\n"
+	"		</material>\n"
+	"	</materials>\n"
+	"...\n"
+	"</scene>\n"
+	"See sample scene file for example values.";
+
+const char * PHONG_MATERIAL_XML_ERROR = 
+	"Error in scene file materials setup. \n"
+	"Phong material should be defined as shown below: \n"
+	"<scene>\n"
+	"...\n"
+	"	<materials>\n"
+	"		<material>\n"
+	"			<name>name</name> <!-- where name is a unique string --> \n"
+	"			<type>phong</type> \n"
+	"			<color>r g b</color> <!-- where r, g, and b are floats between 0 and 1 -->\n"
+	"			<specCoeff>s</specCoeff> <!-- where s is an int -->\n"
+	"			<texture>f</texture> <!-- (optional) where f is the filename of the texture to use -->\n"
+	"			<normal_map>f</normal_map> <!-- (optional) where f is the filename of the normal map to use -->\n"
+	"		</material>\n"
+	"	</materials>\n"
+	"...\n"
+	"</scene>\n"
+	"See sample scene file for example values.";
+
+const char * GLOSSYREFLECTIVE_MATERIAL_XML_ERROR = 
+	"Error in scene file materials setup. \n"
+	"Glossy reflective material should be defined as shown below: \n"
+	"<scene>\n"
+	"...\n"
+	"	<materials>\n"
+	"		<material>\n"
+	"			<name>name</name> <!-- where name is a unique string --> \n"
+	"			<type>glossyreflective</type> \n"
+	"			<color>r g b</color> <!-- where r, g, and b are floats between 0 and 1 -->\n"
+	"			<specCoeff>s</specCoeff> <!-- where s is an int -->\n"
+	"			<reflectivity>r</reflectivity> <!-- where r is a float between 0 and 1 -->\n"
+	"			<texture>f</texture> <!-- (optional) where f is the filename of the texture to use -->\n"
+	"			<normal_map>f</normal_map> <!-- (optional) where f is the filename of the normal map to use -->\n"
+	"		</material>\n"
+	"	</materials>\n"
+	"...\n"
+	"</scene>\n"
+	"See sample scene file for example values.";
+
+const char * TRANSLUCENT_MATERIAL_XML_ERROR = 
+	"Error in scene file materials setup. \n"
+	"Translucent material should be defined as shown below: \n"
+	"<scene>\n"
+	"...\n"
+	"	<materials>\n"
+	"		<material>\n"
+	"			<name>name</name> <!-- where name is a unique string --> \n"
+	"			<type>translucent</type> \n"
+	"			<color>r g b</color> <!-- where r, g, and b are floats between 0 and 1 -->\n"
+	"			<specCoeff>s</specCoeff> <!-- where s is an int -->\n"
+	"			<eta>eta</eta> <!-- where eta is a float -->\n"
+	"			<texture>f</texture> <!-- (optional) where f is the filename of the texture to use -->\n"
+	"			<normal_map>f</normal_map> <!-- (optional) where f is the filename of the normal map to use -->\n"
+	"		</material>\n"
+	"	</materials>\n"
+	"...\n"
+	"</scene>\n"
+	"See sample scene file for example values.";
+
+const char * REFLECTIVE_MATERIAL_XML_ERROR = 
+	"Error in scene file materials setup. \n"
+	"Reflective material should be defined as shown below: \n"
+	"<scene>\n"
+	"...\n"
+	"	<materials>\n"
+	"		<material>\n"
+	"			<name>name</name> <!-- where name is a unique string --> \n"
+	"			<type>reflective</type> \n"
+	"			<color>r g b</color> <!-- where r, g, and b are floats between 0 and 1 -->\n"
+	"			<specCoeff>s</specCoeff> <!-- where s is an int -->\n"
+	"			<reflectivity>r</reflectivity> <!-- where r is a float between 0 and 1 -->\n"
+	"			<texture>f</texture> <!-- (optional) where f is the filename of the texture to use -->\n"
+	"			<normal_map>f</normal_map> <!-- (optional) where f is the filename of the normal map to use -->\n"
+	"		</material>\n"
+	"	</materials>\n"
+	"...\n"
+	"</scene>\n"
+	"See sample scene file for example values.";
+
+const char * REFRACTIVE_MATERIAL_XML_ERROR = 
+	"Error in scene file materials setup. \n"
+	"Refractive material should be defined as shown below: \n"
+	"<scene>\n"
+	"...\n"
+	"	<materials>\n"
+	"		<material>\n"
+	"			<name>name</name> <!-- where name is a unique string --> \n"
+	"			<type>refractive</type> \n"
+	"			<color>r g b</color> <!-- where r, g, and b are floats between 0 and 1 -->\n"
+	"			<specCoeff>s</specCoeff> <!-- where s is an int -->\n"
+	"			<transmission>t</transmission> <!-- where t is a float between 0 and 1 -->\n"
+	"			<eta>eta</eta> <!-- where eta is a float -->\n"
+	"			<texture>f</texture> <!-- (optional) where f is the filename of the texture to use -->\n"
+	"			<normal_map>f</normal_map> <!-- (optional) where f is the filename of the normal map to use -->\n"
+	"		</material>\n"
+	"	</materials>\n"
+	"...\n"
+	"</scene>\n"
+	"See sample scene file for example values.";
+
+const char * IRIDESCENT_MATERIAL_XML_ERROR = 
+	"Error in scene file materials setup. \n"
+	"Iridescent material should be defined as shown below: \n"
+	"<scene>\n"
+	"...\n"
+	"	<materials>\n"
+	"		<material>\n"
+	"			<name>name</name> <!-- where name is a unique string --> \n"
+	"			<type>iridescent</type> \n"
+	"			<eta>eta</eta> <!-- where eta is a float -->\n"
+	"			<normal_map>f</normal_map> <!-- (optional) where f is the filename of the normal map to use -->\n"
+	"		</material>\n"
+	"	</materials>\n"
+	"...\n"
+	"</scene>\n"
+	"See sample scene file for example values.";
+
+/*
+ * XML SCENE FILE OBJECTS ERRORS
+ */
+
+const char * OBJECTS_XML_ERROR = 
+	"Error in scene file objects setup. \n"
+	"Objects should be defined as shown below: \n"
+	"<scene>\n"
+	"...\n"
+	"	<objects>\n"
+	"		<object>\n"
+	"			<type>type</type> <!-- where type is a string --> \n"
+	"			<material>name</material> <!-- where name is a string corresponding to an existing named material --> \n"
+	"			...\n"
+	"		</object>\n"
+	"	</objects>\n"
+	"...\n"
+	"</scene>\n"
+	"See sample scene file for example values.";
+
+const char * PLANE_XML_ERROR = 
+	"Error in scene file plane setup. \n"
+	"Plane objects should be defined as shown below: \n"
+	"<scene>\n"
+	"...\n"
+	"	<objects>\n"
+	"		<object>\n"
+	"			<type>plane</type>\n"
+	"			<material>name</material> <!-- where name is a string corresponding to an existing named material --> \n"
+	"			<center>x y z</center> <!-- where x, y, and z are floats -->\n"
+	"			<normal>x y z</normal> <!-- where x, y, and z define a normal vector -->\n"
+	"		</object>\n"
+	"	</objects>\n"
+	"...\n"
+	"</scene>\n"
+	"See sample scene file for example values.";
+
+const char * SPHERE_XML_ERROR = 
+	"Error in scene file sphere setup. \n"
+	"Sphere objects should be defined as shown below: \n"
+	"<scene>\n"
+	"...\n"
+	"	<objects>\n"
+	"		<object>\n"
+	"			<type>sphere</type>\n"
+	"			<material>name</material> <!-- where name is a string corresponding to an existing named material --> \n"
+	"			<center>x y z</center> <!-- where x, y, and z are floats -->\n"
+	"			<radius>r</radius> <!-- where r is an int -->\n"
+	"		</object>\n"
+	"	</objects>\n"
+	"...\n"
+	"</scene>\n"
+	"See sample scene file for example values.";
+
+const char * OBJ_XML_ERROR = 
+	"Error in scene file OBJ setup. \n"
+	"OBJ objects should be defined as shown below: \n"
+	"<scene>\n"
+	"...\n"
+	"	<objects>\n"
+	"		<object>\n"
+	"			<type>OBJ</type>\n"
+	"			<material>name</material> <!-- where name is a string corresponding to an existing named material --> \n"
+	"			<filename>f</filename> <!-- where f is the OBJ file to load -->\n"
+	"			<location>x y z</location> <!-- where x, y, and z are floats -->\n"
+	"			<scale>s</scale> <!-- where s is a float used to scale the object -->\n"
+	"		</object>\n"
+	"	</objects>\n"
+	"...\n"
+	"</scene>\n"
+	"See sample scene file for example values.";
+
+#endif

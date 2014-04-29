@@ -1,0 +1,199 @@
+<?xml version="1.0"?>
+<scene>
+    <camera>
+        <origin>-1 2 4</origin>
+        <dimensions>640 480</dimensions>
+        <aspect>1.5 1</aspect>
+        <d>5</d>
+        <focal>4.75</focal>
+        <lens_radius>0</lens_radius>
+    </camera>
+    <sampler>
+        <type>Jittered</type>
+        <samples>4</samples>
+    </sampler>
+    <recursion_depth>2</recursion_depth>
+    <lighting>
+        <environment_map>env_stars.bmp</environment_map>
+        <bgcolor>0 0 0</bgcolor> <!-- black or 0 0 0 -->
+        <!--
+        <ambient_occlusion>
+            <casts_shadows>true</casts_shadows>
+        </ambient_occlusion>
+        
+        <environment_lighting>
+            <filename>env_stars.bmp</filename>
+            <casts_shadows>true</casts_shadows>
+        </environment_lighting>
+        -->
+        <lights>
+            <light>
+                <type>point</type>
+                <casts_shadows>true</casts_shadows>
+                <color>1 1 1</color>
+                <radiance>3.5</radiance>
+                <location>5 5 5</location>
+            </light>
+            
+            <light>
+                <type>point</type>
+                <casts_shadows>true</casts_shadows>
+                <color>1 1 1</color>
+                <radiance>4</radiance>
+                <location>-5 3 -4</location>
+            </light>
+            
+            <!--
+            <light>
+                <type>directional</type>
+                <casts_shadows>true</casts_shadows>
+                <color>white</color>
+                <radiance>1</radiance>
+                <direction>-1 -1 0</direction>
+            </light>
+            
+            <light>
+                <type>spot</type>
+                <casts_shadows>true</casts_shadows>
+                <color>white</color>
+                <radiance>1</radiance>
+                <location>1 10 10</location>
+                <texture>filename</texture>
+            </light>
+            
+            <light>
+                <type>area</type>
+                <casts_shadows>true</casts_shadows>
+                <color>white</color>
+                <radiance>2</radiance>
+                <corner>-2 2 -4</corner>
+                <side1>0 2 0</side1>
+                <side2>2 0 0</side2>
+            </light>
+            
+            <light>
+                <type>ambientocclusion</type>
+                <casts_shadows>true</casts_shadows>
+            </light>
+            
+            <light>
+                <type>environment</type>
+                <casts_shadows>true</casts_shadows>
+                <filename>env_stars.bmp</filename>
+            </light>
+            -->
+        </lights>
+    </lighting>
+    
+    <materials>
+        <!--
+        <material>
+            <name>Lambert1</name>
+            <type>lambert</type>
+            <color>blue</color>
+        </material>
+        <material>
+            <name>Phong1</name>
+            <type>phong</type>
+            <color>0.8 0.2 0.7</color>
+            <specCoeff>50</specCoeff>
+        </material>
+        <material>
+            <name>GlossyReflective1</name>
+            <type>glossyreflective</type>
+            <color>black</color>
+            <specCoeff>50</specCoeff>
+            <reflectivity>0.8</reflectivity>
+        </material>
+        <material>
+            <name>Translucent1</name>
+            <type>translucent</type>
+            <color>black</color>
+            <specCoeff>50</specCoeff>
+            <eta>1.5</eta>
+        </material>
+        -->
+        <material>
+            <name>Reflective1</name>
+            <type>reflective</type>
+            <color>1 0 0</color>
+            <specCoeff>50</specCoeff>
+            <reflectivity>0.8</reflectivity>
+        </material>
+        <material>
+            <name>Reflective2</name>
+            <type>reflective</type>
+            <texture>tiles.bmp</texture>
+            <normal_map>normalmaptiles.bmp</normal_map>
+            <specCoeff>50</specCoeff>
+            <reflectivity>0.2</reflectivity>
+        </material>
+        <!--
+        <material>
+            <name>Refractive1</name>
+            <type>refractive</type>
+            <color>black</color>
+            <specCoeff>50</specCoeff>
+            <transmission>0.9</transmission>
+            <eta>0.7</eta>
+        </material>
+        <material>
+            <name>Iridescent1</name>
+            <type>iridescent</type>
+            <eta>0.5</eta>
+        </material>
+        -->
+    </materials>
+    <objects>
+        <object>
+            <type>plane</type>
+            <center>0 -2 0</center>
+            <normal>0 1 0</normal>
+            <material>Reflective2</material>
+        </object>
+        
+        <object>
+            <type>sphere</type>
+            <center>0 0 1</center>
+            <radius>2</radius>
+            <material>Reflective1</material>
+        </object>
+        <!--
+        <object>
+            <type>OBJ</type>
+            <filename>buddha.obj</filename>
+            <scale>0.5</scale>
+            <location>0 -1.5 2.0</location>
+            <material>Reflective1</material>
+        </object>
+        <object>
+            <type>OBJ</type>
+            <filename>bunny.obj</filename>
+            <scale>15.0</scale>
+            <location>0 0 1.0</location>
+            <material>Reflective1</material>
+        </object>
+        <object>
+            <type>OBJ</type>
+            <filename>dodecahandle.obj</filename>
+            <scale>1.0</scale>
+            <location>0 0 0</location>
+            <material>Reflective1</material>
+        </object>
+        <object>
+            <type>OBJ</type>
+            <filename>bunny_big.obj</filename>
+            <scale>0.5</scale>
+            <location>0.5 -2.0 0</location>
+            <material>Reflective1</material>
+        </object>
+        <object>
+            <type>OBJ</type>
+            <filename>dragon.obj</filename>
+            <scale>0.5</scale>
+            <location>1.0 -1.25 0.25</location>
+            <material>Reflective1</material>
+        </object>
+        -->
+    </objects>
+</scene>
